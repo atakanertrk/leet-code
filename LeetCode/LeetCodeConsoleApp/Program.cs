@@ -7,7 +7,7 @@ namespace LeetCodeConsoleApp
         static void Main(string[] args)
         {
             Assembly assembly = Assembly.GetExecutingAssembly();
-            var type = assembly.GetType($"LeetCodeConsoleApp.LetterCombinationsOfPhoneNumber");
+            var type = assembly.GetType($"LeetCodeConsoleApp.CombinationSumProblem");
 
             var instance = Activator.CreateInstance(type);
 
