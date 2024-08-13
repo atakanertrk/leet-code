@@ -1,2 +1,7 @@
-# leet-code
-LeetCode saved problems and just progress notes
+# LeetCode Progress
+
+https://roadmap.sh/datastructures-and-algorithms
+
+* Top 100 Liked Questions (LeetCode)
+
+* Top Interview 150
