@@ -1,4 +1,7 @@
-﻿using System.Reflection;
+﻿using DataStructuresAndAlgorithmsConsoleApp.DataStructures;
+using System;
+using System.Reflection;
+using System.Text;
 
 namespace DataStructuresAndAlgorithmsConsoleApp
 {
@@ -6,7 +9,8 @@ namespace DataStructuresAndAlgorithmsConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //new FindIndexRecursive().Run();
+            new RecursiveBinarySearchTree().Run();
         }
     }
 }
