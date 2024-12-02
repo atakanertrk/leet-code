@@ -10,7 +10,8 @@ namespace DataStructuresAndAlgorithmsConsoleApp
         static void Main(string[] args)
         {
             //new FindIndexRecursive().Run();
-            new RecursiveBinarySearchTree().Run();
+            //new RecursiveBinarySearchTree().Run();
+            //new TrieDataStructure().Run();
         }
     }
 }
