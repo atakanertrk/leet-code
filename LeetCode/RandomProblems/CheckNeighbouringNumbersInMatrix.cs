@@ -26,6 +26,8 @@ namespace LeetCodeConsoleApp
                 { 5, 8 }
             };
 
+            // my assumption is each element is neighbour of its +/- 1 on both x and y axis
+            // therefore I create Neighbour class and List of it to contain neigbour relationship
             var neighboursList = new List<Neighbour>();
             for (int y = 0; y < matrix.GetLength(0); y++)
             {
@@ -33,27 +35,25 @@ namespace LeetCodeConsoleApp
                 {
                     var currentValue = (int)matrix.GetValue(y, x);
                     var neighbour = new Neighbour() { Value = currentValue, Neighbours = new List<int>() };
-                    int xNeighbourIndex2 = x - 1;
-                    int yNeighbourIndex1 = y + 1;
-                    int yNeighbourIndex2 = y - 1;
 
-                    if (x + 1 >= 0 && x + 1 <= matrix.GetLength(1))
+                    if (x + 1 < matrix.GetLength(1))
                     {
                         neighbour.Neighbours.Add((int)matrix.GetValue(y, x + 1));
                     }
-                    if (x - 1 >= 0 && x + 1 <= matrix.GetLength(1))
+                    if (x - 1 >= 0 && x - 1 < matrix.GetLength(1))
                     {
                         neighbour.Neighbours.Add((int)matrix.GetValue(y, x - 1));
                     }
 
-                    if (y + 1 >= 0 && y + 1 <= matrix.GetLength(0))
+                    if (y + 1 < matrix.GetLength(0))
                     {
                         neighbour.Neighbours.Add((int)matrix.GetValue(y + 1, x));
                     }
-                    if (y - 1 >= 0 && y + 1 <= matrix.GetLength(0))
+                    if (y - 1 >= 0 && y - 1 < matrix.GetLength(0))
                     {
                         neighbour.Neighbours.Add((int)matrix.GetValue(y - 1, x));
                     }
+                    neighboursList.Add(neighbour);
                 }
             }
         }
