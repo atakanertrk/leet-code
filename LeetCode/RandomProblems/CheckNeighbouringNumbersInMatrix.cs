@@ -85,25 +85,25 @@ namespace LeetCodeConsoleApp
             {
                 for (int x = 0; x < matrix.GetLength(1); x++)
                 {
-                    var currentValue = (int)matrix.GetValue(y, x);
+                    var currentValue = matrix[y, x];
                     var neighbour = new Neighbour() { Value = currentValue, Neighbours = new List<int>() };
 
                     if (x + 1 < matrix.GetLength(1))
                     {
-                        neighbour.Neighbours.Add((int)matrix.GetValue(y, x + 1));
+                        neighbour.Neighbours.Add(matrix[y, x + 1]);
                     }
                     if (x - 1 >= 0 && x - 1 < matrix.GetLength(1))
                     {
-                        neighbour.Neighbours.Add((int)matrix.GetValue(y, x - 1));
+                        neighbour.Neighbours.Add(matrix[y, x - 1]);
                     }
 
                     if (y + 1 < matrix.GetLength(0))
                     {
-                        neighbour.Neighbours.Add((int)matrix.GetValue(y + 1, x));
+                        neighbour.Neighbours.Add(matrix[y + 1, x]);
                     }
                     if (y - 1 >= 0 && y - 1 < matrix.GetLength(0))
                     {
-                        neighbour.Neighbours.Add((int)matrix.GetValue(y - 1, x));
+                        neighbour.Neighbours.Add(matrix[y - 1, x]);
                     }
                     neighboursList.Add(neighbour);
                 }
